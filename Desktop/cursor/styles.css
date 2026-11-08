@@ -1,0 +1,143 @@
+:root {
+  color-scheme: dark;
+  --cream: #f6ecd4;
+  --brass: #e0b45a;
+  --brass-deep: #a07832;
+  --soot: #12100e;
+  --ink: #2a2116;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+  background:
+    radial-gradient(1100px 560px at 50% -8%, rgba(56, 140, 132, 0.42), transparent 62%),
+    radial-gradient(820px 480px at 86% 112%, rgba(176, 104, 38, 0.34), transparent 58%),
+    #101614;
+  color: var(--cream);
+  font-family: "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+#mute {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 5;
+  min-height: 44px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(224, 180, 90, 0.85);
+  background: rgba(18, 16, 14, 0.88);
+  color: var(--cream);
+  font: 600 1rem/1 "Palatino Linotype", Palatino, Georgia, serif;
+  cursor: pointer;
+}
+
+#mute:hover {
+  background: rgba(42, 34, 22, 0.95);
+}
+
+#mute:focus-visible,
+.primary:focus-visible {
+  outline: 3px solid #8fd9cf;
+  outline-offset: 3px;
+}
+
+.card {
+  position: fixed;
+  z-index: 4;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: min(32rem, calc(100% - 2rem));
+  max-height: calc(100vh - 2rem);
+  overflow: auto;
+  padding: 1.6rem 1.7rem 1.4rem;
+  border-radius: 18px;
+  border: 1px solid rgba(224, 180, 90, 0.88);
+  background:
+    linear-gradient(180deg, rgba(54, 44, 30, 0.94), rgba(14, 16, 16, 0.96));
+  box-shadow:
+    0 0 0 1px rgba(12, 10, 8, 0.85),
+    0 24px 70px rgba(0, 0, 0, 0.48),
+    inset 0 1px 0 rgba(255, 236, 196, 0.28);
+}
+
+.card[hidden] {
+  display: none;
+}
+
+.kicker {
+  margin: 0 0 0.35rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  color: #8fd0c6;
+}
+
+h1 {
+  margin: 0 0 0.55rem;
+  font-size: clamp(2rem, 4vw, 2.7rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #f3d48a;
+}
+
+h2 {
+  margin: 1rem 0 0.4rem;
+  font-size: 1.15rem;
+  color: var(--brass);
+}
+
+.lead,
+.card p {
+  margin: 0.4rem 0;
+  font-size: 1.08rem;
+  line-height: 1.45;
+}
+
+ul {
+  margin: 0.2rem 0 0.8rem;
+  padding-left: 1.2rem;
+}
+
+li {
+  margin: 0.28rem 0;
+  font-size: 1.08rem;
+  line-height: 1.4;
+}
+
+li::marker {
+  color: var(--brass);
+}
+
+.primary {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  min-height: 48px;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  background: linear-gradient(#f4d78c, #c4923a);
+  color: var(--ink);
+  font: 700 1.08rem/1 "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+.primary:hover {
+  filter: brightness(1.06);
+}
